@@ -8,3 +8,9 @@ import datetime as dt
 import yfinance as yk
 import pandas_ta
 import warnings
+
+warnings.filterwarnings('ignore')
+
+sp500 = pd.read_html("https://en.wikipedia.org/wiki/List_of_s%26P_500_companies')[0]
+
+sp500['symbol'] = sp500['Symbol'].str
