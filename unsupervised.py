@@ -5,7 +5,7 @@ import statsmodels.api as sm
 import pandas as pd
 import numpy as np
 import datetime as dt
-import yfinance as yk
+import yfinance as yf
 import pandas_ta
 import warnings
 
