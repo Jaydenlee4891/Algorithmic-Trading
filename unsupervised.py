@@ -23,7 +23,13 @@ start_date = pd.to_datetime(end_date)-pd.DateOffset(365*8)
 
 df = yf.download(tickers=symbols_list, start=start_date,end=end_date)
 
-df.stack()
+df = df.stack()
 
 #Garman-Klass
+df['garman_klass_vol'] = (
+    0.5 * (np.log(df['high'] / df['low']))**2 
+    - (2 * np.log(2) - 1) * (np.log(df['adj close'] / df['open']))**2
+)
+
+
 
