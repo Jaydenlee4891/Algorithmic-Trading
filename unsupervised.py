@@ -28,7 +28,7 @@ df = df.stack()
 #Garman-Klass
 df['garman_klass_vol'] = (
     0.5 * (np.log(df['high'] / df['low']))**2 
-    - (2 * np.log(2) - 1) * (np.log(df['adj close'] / df['open']))**2
+    - (2 * np.log(2) - 1) * (np.log(df['close'] / df['open']))**2
 )
 
 
